@@ -19,8 +19,8 @@ imageTags.forEach((img, index) => {
   img.src = finalImages[index];
 });
 
-const reset = document.querySelector(".reset");
-const verify = document.querySelector(".verify");
+const reset = document.querySelector("#reset");
+const verify = document.querySelector("#verify");
 const success = document.createElement("p");
 const fail = document.createElement("p");
 
