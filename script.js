@@ -17,6 +17,7 @@ finalImages.sort(() => Math.random() - 0.5);
 
 imageTags.forEach((img, index) => {
   img.src = finalImages[index];
+  img.className = `img${index + 1}`;
 });
 
 const reset = document.querySelector("#reset");
@@ -61,9 +62,9 @@ function verifyFunc() {
 
   if (selected[0].currentSrc == selected[1].currentSrc) {
     success.innerHTML="You are a human. Congratulations!";
-    document.main.appendChild(success);
+    document.querySelector("main").appendChild(success);
   } else {
     fail.innerHTML="We can't verify you as a human. You selected the non-identical tiles.";
-    document.main.appendChild(fail);
+    document.querySelector("main").appendChild(fail);
   }
 }
